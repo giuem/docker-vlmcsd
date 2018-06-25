@@ -2,7 +2,7 @@ FROM alpine:3.6 AS BUILD
 
 WORKDIR /kms
 
-RUN apk add --no-cache -update git build-base & \
+RUN apk add --no-cache git build-base && \
   git clone https://github.com/Wind4/vlmcsd.git . && \
   make
 
